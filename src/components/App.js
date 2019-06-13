@@ -2,7 +2,15 @@ import React from 'react';
 import VideoList from './VideoList.js';
 import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
+<<<<<<< HEAD
 // import Reduc from 'redux';
+=======
+import {connect} from 'react-redux';
+import HandleVideoSearch from './Search';
+import YOUTUBE_API_KEY from '../config/youtube.js';
+import searchYouTube from '../lib/searchYouTube.js';
+
+>>>>>>> 47a0a3c03ece662cc3d682b823159f480acfb52f
 
 class App extends React.Component {
   constructor(props) {
