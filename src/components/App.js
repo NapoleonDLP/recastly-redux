@@ -4,8 +4,8 @@ import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
 import {connect} from 'react-redux';
 import HandleVideoSearch from './Search';
-// import YOUTUBE_API_KEY from './config/youtube.js';
-// import searchYouTube from './lib/searchYouTube.js';
+import YOUTUBE_API_KEY from '../config/youtube.js';
+import searchYouTube from '../lib/searchYouTube.js';
 
 
 class App extends React.Component {
