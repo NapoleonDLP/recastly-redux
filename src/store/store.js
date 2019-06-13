@@ -24,7 +24,7 @@ var store = function() {
   );
 };
 
-
+ 
 
 // export default store;
 export default store(   rootReducer,   {currentVideo: exampleVideoData[0], videoList: exampleVideoData},   applyMiddleware(thunk) ); 
