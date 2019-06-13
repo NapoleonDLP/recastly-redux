@@ -5,28 +5,29 @@ import App from './components/App.js';
 import searchYouTube from './lib/searchYouTube.js';
 import YOUTUBE_API_KEY from './config/youtube.js';
 import {Provider} from 'react-redux';
-import configureStore from './store/store.js';
+import store from './store/store.js';
 import rootReducer from './reducers/main.js';
 import VideoList from './components/VideoList.js';
 import VideoPlayer from './components/VideoPlayer.js';
+import handleVideoSearch from './actions/search.js';
 
 //TODO: Import the Provider component from 'react-redux' here!
 
 //TODO: Use the Provider component to make your store available to
 //  the rest of your app.
 
-const store = configureStore(defaultStore);
+// const store = configureStore(); // how do we pass initialState
 
-var defaultStore = {
-  currentVideo: VideoPlayer,
-  videoList: VideoList
-};
+// var defaultStore = {
+//   currentVideo: VideoPlayer,
+//   videoList: VideoList
+// };
 
 
-render(
+ReactDOM.render(
   <Provider store={store}>
-    <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube}/>
-  </Provider>, document.getElementById('app')
+    <App/>
+  </Provider>, document.getElementById('app'), () => handleVideoSearch('redux tutorials')(store.dispatch)
 );
 
 // ReactDOM.render(
