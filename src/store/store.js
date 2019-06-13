@@ -2,28 +2,29 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './../reducers/main.js';
 import exampleVideoData from '../data/exampleVideoData.js';
-import changeVideo from './../actions/currentVideo.js';
-import { connect } from 'react-redux';
+// import changeVideo from './../actions/currentVideo.js';
+// import { connect } from 'react-redux';
 
 
 // TODO:  Create your redux store, apply thunk as a middleware, and export it!
 
 
 // var defaultStore = {
-//   currentVideo: exampleVideoData[0],
-//   videoList: exampleVideoData
+//   currentVideo: ,
+//   videoList: null
 
 // };
 
 
-var configureStore = function(initialState) {
+var store = function() {
   return createStore(
     rootReducer, 
-    initialState, 
+    {currentVideo: exampleVideoData[0], videoList: exampleVideoData}, 
     applyMiddleware(thunk)
   );
 };
 
 
 
-export default configureStore;
+// export default store;
+export default store(   rootReducer,   {currentVideo: exampleVideoData[0], videoList: exampleVideoData},   applyMiddleware(thunk) ); 
