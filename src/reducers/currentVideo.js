@@ -6,15 +6,9 @@ var currentVideoReducer = (state, action) => {
   case 'CHANGE_VIDEO':
     return action.video;
 
-<<<<<<< HEAD
   default:
-    return state; //null
+    return null; //null
 
-=======
-  default: 
-    return null;
-    
->>>>>>> 47a0a3c03ece662cc3d682b823159f480acfb52f
   }
 };
 

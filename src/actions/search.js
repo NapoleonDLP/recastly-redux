@@ -3,10 +3,6 @@ import changeVideoList from './videoList.js';
 import changeVideo from './currentVideo.js';
 import YOUTUBE_API_KEY from '../config/youtube.js';
 import thunk from 'redux-thunk';
-<<<<<<< HEAD
-=======
-
->>>>>>> 47a0a3c03ece662cc3d682b823159f480acfb52f
 
 
 var handleVideoSearch = (q) => {
