@@ -7,7 +7,7 @@ var currentVideoReducer = (state, action) => {
     return action.video;
 
   default: 
-    return state;
+    return null;
     
   }
 };
